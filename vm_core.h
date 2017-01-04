@@ -20,7 +20,9 @@
 /* forward declare to avoid adding omr to the include path of every compile */
 struct OMR_VM;
 struct OMR_VMThread;
-struct MM_SublistPool;
+#ifdef __cplusplus
+class MM_SublistPool;
+#endif /* __cplusplus */
 struct J9VMGC_SublistFragment;
 
 /* These need to go after ruby/ruby.h which includes config.h which sets the

@@ -177,7 +177,10 @@ st_index_t st_hash_uint32(st_index_t h, uint32_t i);
 st_index_t st_hash_uint(st_index_t h, st_index_t i);
 st_index_t st_hash_end(st_index_t h);
 st_index_t st_hash_start(st_index_t h);
+
+#if defined(OMR)
 void rb_omr_mark_st_table(rb_omr_markstate_t ms, st_table *table);
+#endif /* defined(OMR) */
 #define st_hash_start(h) ((st_index_t)(h))
 
 RUBY_SYMBOL_EXPORT_END
